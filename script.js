@@ -56,8 +56,8 @@ let users = [
 ];
 
 
-let filteredUsers = users.filter(user => parseFloat(user.balance.split('$').join('').split(',').join('')) > 2000);
-let phoneNumbers = filteredUsers.map(user => user.phone);
+let filteredUsers = users.filter(users => parseFloat(users.balance.replace('$', '').replace(',', '')) > 2000);
+let phoneNumbers = filteredUsers.map(users => users.phone);
 
 console.log(phoneNumbers);
 
